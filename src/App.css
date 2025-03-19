@@ -1,0 +1,10 @@
+#root {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    height: 100vh;
+
+}

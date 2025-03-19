@@ -1,0 +1,14 @@
+.principal p{
+    text-align: center;    
+}
+
+.principal p:first-child{
+    color: var(--cor-primaria);
+    font-size: 2.8rem;
+    margin: 10% 0;
+}
+
+.principal p:last-child{
+    color: var(--cor-primaria);
+    font-size: 2rem;
+}
