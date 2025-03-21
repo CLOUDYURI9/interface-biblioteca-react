@@ -1,19 +1,15 @@
 
 import './App.css'
-import Cabecalho from './components/Cabecalho/Cabecalho'
-import Rodape from './components/Rodape/Rodape'
-import Principal from './components/Welcome/Welcome'
+import AppRoutes from './routes';
 
 function App() {
-  
+
 
   return (
     <>
-      <Cabecalho/>
-      <Principal/>
-      <Rodape/>
+      <AppRoutes />
     </>
   )
 }
 
-export default App
+export default App;
