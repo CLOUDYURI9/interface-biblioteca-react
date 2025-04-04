@@ -1,15 +1,17 @@
 .cabecalho {
     width: 100%;
-    height: 80%;
+    height: 68%;
     background-color: var(--cor-primaria);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.imgLogo {
+.imgLogo,
+.imgLogo img {
     height: 100%;
 }
+
 
 .cabecalho a {
     color: var(--branco-suave);

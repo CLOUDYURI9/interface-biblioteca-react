@@ -1,14 +1,18 @@
 import estilo from './Cabecalho.module.css';
 import logotipo from '../../assets/logotipo.png';
-import { Link } from 'react-router-dom'
+import { APP_ROUTES } from '../../appConfig';
 
 function Cabecalho() {
     return (
         <header className={estilo.cabecalho}>
-            <a href="/"><img src={logotipo} alt="" className={estilo.imgLogo}/> </a>
-            <ul>
-                <li><a href='/login'>Login</a></li>
-            </ul>
+            <a href={APP_ROUTES.ROUTE_HOME} className={estilo.imgLogo} ><img src={logotipo}  alt="" /> </a>
+            <a href={APP_ROUTES.ROUTE_LOGIN}>Login</a>
+            <a href={APP_ROUTES.ROUTE_ALUNO}>Aluno</a>
+            <a href={APP_ROUTES.ROUTE_LIVRO}>Livro</a>
+            <a href={APP_ROUTES.ROUTE_EMPRESTIMO}>Emprestimo</a>
+
+
+            
         </header>
     )
 

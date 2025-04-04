@@ -1,16 +1,15 @@
 import Cabecalho from "../../components/Cabecalho/Cabecalho";
-import Welcome from "../../components/Welcome/Welcome";
 import Rodape from "../../components/Rodape/Rodape";
+import TabelaLivro from "../../components/Tabelas/TabelaLivro/TabelaLivro";
 
-
-function PHome() {
+function PLivro() {
     return(
         <>
             <Cabecalho/>
-            <Welcome/>
+            <TabelaLivro/>
             <Rodape/>
         </>
     )
 }
 
-export default PHome;
+export default PLivro;

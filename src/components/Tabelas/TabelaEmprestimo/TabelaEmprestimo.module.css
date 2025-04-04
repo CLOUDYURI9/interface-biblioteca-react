@@ -1,0 +1,72 @@
+.tabelaEmprestimo {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Cabeçalho da tabela (parte superior) */
+  .tabelaEmprestimo :global(.p-datatable-header) {
+    background-color: #f9fafb;
+    font-weight: bold;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-bottom: 1px solid #cce4f6;
+  }
+  
+  /* Títulos das colunas */
+  .tabelaEmprestimo :global(.p-datatable-thead > tr > th) {
+    background-color: #eaf6fc;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid #cce4f6; /* borda completa azul bebê */
+    border-right: 1px solid #cce4f6;
+  }
+  
+  /* Remove a borda direita da última coluna */
+  .tabelaEmprestimo :global(.p-datatable-thead > tr > th:last-child) {
+    border-right: none;
+  }
+  
+  /* Linhas da tabela */
+  .tabelaEmprestimo :global(.p-datatable-tbody > tr) {
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .tabelaEmprestimo :global(.p-datatable-tbody > tr:hover) {
+    background-color: #eef7fc;
+  }
+  
+  /* Células da tabela */
+  .tabelaEmprestimo :global(.p-datatable-tbody > tr > td) {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    color: #444;
+    border-right: 1px solid #cce4f6; /* linha entre colunas azul bebê */
+  }
+  
+  /* Remove a borda direita da última célula */
+  .tabelaEmprestimo :global(.p-datatable-tbody > tr > td:last-child) {
+    border-right: none;
+  }
+  
+  /* Paginação */
+  .tabelaEmprestimo :global(.p-paginator) {
+    background-color: transparent;
+    border-top: 1px solid #cce4f6;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    justify-content: center;
+  }
+  
+  /* Células da tabela (com borda inferior entre as rows) */
+.tabelaEmprestimo :global(.p-datatable-tbody > tr > td) {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    color: #444;
+    border-right: 1px solid #cce4f6; /* linha entre colunas */
+    border-bottom: 1px solid #cce4f6; /* linha entre linhas */
+  }
+  
