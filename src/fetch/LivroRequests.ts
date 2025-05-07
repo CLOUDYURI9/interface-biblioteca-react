@@ -54,6 +54,33 @@ class LivroRequests {
             return null;
         }
     }
+
+    /**
+     * Envia os dados do formulário livro para a API
+     * @param formLivro Objeto com os valores do formulario
+     * @returns **true** se cadastro com sucesso
+     */
+    async enviaFormularioLivro(formLivro: string): Promise<boolean> {
+        try {
+            const respostaAPI = await fetch(`${this.serverURL}${this.routeCadastraLivro}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: formLivro
+            });
+
+            if(!respostaAPI.ok) {
+                throw new Error('Erro ao fazer requisição com o sevidor');
+            }
+
+            return true;
+            
+        } catch (error) {
+            console.error(`Erro ao enviar o formulario. ${error}`);
+            return false;
+        }
+    }
 }
 
 // Exporta a classe já com um objeto instanciado para ser usado diretamente

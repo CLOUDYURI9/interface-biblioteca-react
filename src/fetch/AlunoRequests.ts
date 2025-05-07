@@ -51,6 +51,35 @@ class AlunoRequests {
             return null;
         }
     }
+
+
+
+    /**
+     * Envia os dados do formulário aluno para a API
+     * @param formAluno Objeto com os valores do formulario
+     * @returns **true** se cadastro com sucesso
+     */
+    async enviaFormularioAluno(formAluno: string): Promise<boolean> {
+        try {
+            const respostaAPI = await fetch(`${this.serverURL}${this.routeCadastraAluno}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: formAluno
+            });
+
+            if(!respostaAPI.ok) {
+                throw new Error('Erro ao fazer requisição com o sevidor');
+            }
+
+            return true;
+            
+        } catch (error) {
+            console.error(`Erro ao enviar o formulario. ${error}`);
+            return false;
+        }
+    }
 }
 
 // Exporta a classe já instanciando um objeto da mesma
